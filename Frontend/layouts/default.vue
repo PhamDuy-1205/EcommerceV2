@@ -1,5 +1,5 @@
 <template>
-    <div class="screen">
+    <div class="screen font-sans">
         <div class="headerForm">
             <headerForm />
         </div>
@@ -15,8 +15,6 @@
 
 <style lang="scss">
 .screen{
-    width: 100%;
-    height: 100%;
     user-select: none;
 }
 </style>
