@@ -7,7 +7,7 @@ const menuBoxDisplay = ref(false)
 
 
 <template>
-    <div id="navbar" class="w-full flex justify-center border-[1px] border-red-600">
+    <div id="navbar" class="w-full flex justify-center">
         <div class="w-[70%] h-[6.3rem] flex justify-center items-center flex-col xl:h-auto">
             <div class="w-full hidden justify-between items-center p-[20px] rounded-tl-[230px] rounded-tr-[100px] rounded-bl-[100px] rounded-br-[230px] text-[--white] font-[400] text-[0.875rem] bg-[--firstMainColor]
             xl:flex">

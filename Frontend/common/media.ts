@@ -6,6 +6,8 @@ const green_search = '/_nuxt/assets/media/icons/green_search.png'
 const green_cart = '/_nuxt/assets/media/icons/green_cart.png'
 const green_user_profile = '/_nuxt/assets/media/icons/green_user_profile.png'
 const green_menu = '/_nuxt/assets/media/icons/green_menu.png'
+const facebook_icon = '/_nuxt/assets/media/icons/facebook_icon.png'
+const linkedin_icon = '/_nuxt/assets/media/icons/linkedin_icon.png'
 // ---- Icons End ----
 
 
@@ -20,4 +22,6 @@ export default {
     green_cart,
     green_user_profile,
     green_menu,
+    facebook_icon,
+    linkedin_icon,
 }
