@@ -8,11 +8,15 @@ const green_user_profile = '/_nuxt/assets/media/icons/green_user_profile.png'
 const green_menu = '/_nuxt/assets/media/icons/green_menu.png'
 const facebook_icon = '/_nuxt/assets/media/icons/facebook_icon.png'
 const linkedin_icon = '/_nuxt/assets/media/icons/linkedin_icon.png'
+const youtube_icon = '/_nuxt/assets/media/icons/youtube_icon.png'
+const twitter_icon = '/_nuxt/assets/media/icons/twitter_icon.png'
 // ---- Icons End ----
 
 
 // ---- Image Start ----
 const default_avatar = '/_nuxt/assets/media/images/default_avatar.png'
+const payment = '/_nuxt/assets/media/images/payment.png'
+const userAvatar = '/_nuxt/assets/media/images/userAvatar.png'
 // ---- Image End ----
 
 export default {
@@ -24,4 +28,9 @@ export default {
     green_menu,
     facebook_icon,
     linkedin_icon,
+    default_avatar,
+    payment,
+    userAvatar,
+    youtube_icon,
+    twitter_icon,
 }
