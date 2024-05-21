@@ -14,7 +14,7 @@ import media from '~/common/media';
                 </div>
                 <div class="w-full lg:w-[50%] my-[1rem]">
                     <div class="w-full relative flex justify-center items-center h-[3.5rem] pl-[1.5rem] rounded-[30px] bg-white">
-                        <input type="text" class="w-full h-full rounded-[30px] text-[1.5rem] outline-none" placeholder="Your Email">
+                        <input type="text" class="w-full h-full text-[1.5rem] outline-none" placeholder="Your Email">
                         <button type="submit" class="rounded-[30px] w-[12rem] h-full bg-[--firstMainColor] right-0 font-[700] text-[--white] hover:bg-[--secondMainColor] duration-[.5s] active:text-[black]">Subscribe Now</button>
                     </div>
                 </div>
@@ -97,6 +97,7 @@ import media from '~/common/media';
         color: var(--secondMainColor);
         cursor: pointer;
         transition-duration: 0.5s;
+        transform: translateY(2px)
     }
 
     .button-hover {
