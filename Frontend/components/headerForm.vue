@@ -8,7 +8,7 @@ const menuBoxDisplay = ref(false)
 
 <template>
     <div id="navbar" class="w-full flex justify-center">
-        <div class="w-[70%] h-[6.3rem] flex justify-center items-center flex-col xl:h-auto">
+        <div class="w-[87%] h-[6.3rem] flex justify-center items-center flex-col xl:h-auto">
             <div class="w-full hidden justify-between items-center p-[20px] rounded-tl-[230px] rounded-tr-[100px] rounded-bl-[100px] rounded-br-[230px] text-[--white] font-[400] text-[0.875rem] bg-[--firstMainColor]
             xl:flex">
                 <div class="flex justify-start items-center">
@@ -26,7 +26,7 @@ const menuBoxDisplay = ref(false)
                 </div>
             </div>
             <div class="w-full flex justify-between items-center my-[0.5rem]">
-                <h1 class="text-[2.5rem] font-[800] text-[--firstMainColor]">{{ commonData.webName }}</h1>
+                <h1 class="text-[2.5rem] font-[700] text-[--firstMainColor]">{{ commonData.webName }}</h1>
 
                 <div class="hidden xl:flex justify-between items-center">
                     <p class="text-[16px] text-[--gray] font-[400] py-[10px] px-[15px] ishovering">Home</p>
@@ -58,7 +58,6 @@ const menuBoxDisplay = ref(false)
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

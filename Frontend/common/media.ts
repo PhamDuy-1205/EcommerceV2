@@ -10,6 +10,10 @@ const facebook_icon = '/_nuxt/assets/media/icons/facebook_icon.png';
 const linkedin_icon = '/_nuxt/assets/media/icons/linkedin_icon.png';
 const youtube_icon = '/_nuxt/assets/media/icons/youtube_icon.png';
 const twitter_icon = '/_nuxt/assets/media/icons/twitter_icon.png';
+const white_car_icon = '/_nuxt/assets/media/icons/white_car_icon.png';
+const white_phone_icon = '/_nuxt/assets/media/icons/white_phone_icon.png';
+const white_refund_icon = '/_nuxt/assets/media/icons/white_refund_icon.png';
+const white_security_payment_icon = '/_nuxt/assets/media/icons/white_security_payment_icon.png';
 // ---- Icons End ----
 
 
@@ -19,6 +23,7 @@ const payment = '/_nuxt/assets/media/images/payment.png';
 const userAvatar = '/_nuxt/assets/media/images/userAvatar.png';
 const category_1 = '/_nuxt/assets/media/images/category_1.png';
 const category_2 = '/_nuxt/assets/media/images/category_2.jpg';
+const homePageBackGround = '/_nuxt/assets/media/images/homePageBackGround.jpg';
 // ---- Image End ----
 
 export default {
@@ -37,4 +42,9 @@ export default {
     twitter_icon,
     category_1,
     category_2,
+    white_car_icon,
+    white_phone_icon,
+    white_refund_icon,
+    white_security_payment_icon,
+    homePageBackGround,
 }
