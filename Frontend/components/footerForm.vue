@@ -5,11 +5,11 @@ import media from '~/common/media';
 
 
 <template>
-    <div id="footer" class="flex justify-center w-full bg-[#45595b]">
+    <div id="footer" class="flex justify-center w-full bg-[--black]">
         <div class="w-[81.1rem] mx-[2rem] my-[3rem]">
             <div class="block lg:flex justify-between items-center">
                 <div class="w-full lg:w-auto justify-start lg:justify-center items-start flex-col">
-                    <p class="text-[2.5rem] text-[--firstMainColor] font-[600]">{{ commonData.webName }}</p>
+                    <p class="text-[2.5rem] text-[--firstMainColor] font-[600]">{{ commonData.mainData.webName }}</p>
                     <p class="text-[1rem] text-[--secondMainColor] font-[400]">All Products</p>
                 </div>
                 <div class="w-full lg:w-[50%] my-[1rem]">
@@ -64,9 +64,9 @@ import media from '~/common/media';
                 </div>
                 <div>
                     <p class="text-title">Contact</p>
-                    <p class="text-content">Address: {{ commonData.address }}</p>
-                    <p class="text-content">Email: {{ commonData.email }}</p>
-                    <p class="text-content">Phone: {{ commonData.phone }}</p>
+                    <p class="text-content">Address: {{ commonData.mainData.address }}</p>
+                    <p class="text-content">Email: {{ commonData.mainData.email }}</p>
+                    <p class="text-content">Phone: {{ commonData.mainData.phone }}</p>
                     <p class="text-content">Payment Accepted:</p>
                     <img :src="media.payment" alt="" class="mt-[1rem]">
                 </div>

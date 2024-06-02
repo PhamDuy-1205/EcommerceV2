@@ -60,7 +60,7 @@ const categoryPicList = [media.category_1, media.category_2];
                         <div class="absolute w-[35px] h-[35px] bottom-[-10px] rotate-45 bg-[--yellow]"></div>
                     </div>
                     <div class="flex justify-between items-center flex-col">
-                        <p class="text-[#45595b] text-[1.25rem] font-[600] mt-[2.5rem]">Free Shipping</p>
+                        <p class="text-[--black] text-[1.25rem] font-[600] mt-[2.5rem]">Free Shipping</p>
                         <p class="text-[#747d88] text-[1rem] mt-[0.5rem]">Free on order over $300</p>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ const categoryPicList = [media.category_1, media.category_2];
                         <div class="absolute w-[35px] h-[35px] bottom-[-10px] rotate-45 bg-[--yellow]"></div>
                     </div>
                     <div class="flex justify-between items-center flex-col">
-                        <p class="text-[#45595b] text-[1.25rem] font-[600] mt-[2.5rem]">Security Payment</p>
+                        <p class="text-[--black] text-[1.25rem] font-[600] mt-[2.5rem]">Security Payment</p>
                         <p class="text-[#747d88] text-[1rem] mt-[0.5rem]">100% security payment</p>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ const categoryPicList = [media.category_1, media.category_2];
                         <div class="absolute w-[35px] h-[35px] bottom-[-10px] rotate-45 bg-[--yellow]"></div>
                     </div>
                     <div class="flex justify-between items-center flex-col">
-                        <p class="text-[#45595b] text-[1.25rem] font-[600] mt-[2.5rem]">30 Day Return</p>
+                        <p class="text-[--black] text-[1.25rem] font-[600] mt-[2.5rem]">30 Day Return</p>
                         <p class="text-[#747d88] text-[1rem] mt-[0.5rem]">30 day money guarantee</p>
                     </div>
                 </div>
@@ -102,14 +102,14 @@ const categoryPicList = [media.category_1, media.category_2];
                         <div class="absolute w-[35px] h-[35px] bottom-[-10px] rotate-45 bg-[--yellow]"></div>
                     </div>
                     <div class="flex justify-between items-center flex-col">
-                        <p class="text-[#45595b] text-[1.25rem] font-[600] mt-[2.5rem]">24/7 Support</p>
+                        <p class="text-[--black] text-[1.25rem] font-[600] mt-[2.5rem]">24/7 Support</p>
                         <p class="text-[#747d88] text-[1rem] mt-[0.5rem]">Support every time fast</p>
                     </div>
                 </div>
             </div>
 
             <div class="flex justify-between items-center w-full px-[3rem] my-[2rem]">
-                <p class="text-[2.5rem] font-[600] text-[#45595b]">Our Organic Products</p>
+                <p class="text-[2.5rem] font-[600] text-[--black]">Our Organic Products</p>
                 <div class="w-[40rem] flex justify-center items-center">
                     <div v-for="categoryItem, index in categoryList" class="flex justify-center items-center text-[1rem] rounded-[30px] py-[10px] px-[20px] mx-[10px] min-w-[6rem] hover:cursor-pointer hover:translate-y-[-2px]" :class="{ 'bg-[#f4f6f8]': selectedCategoryItem != index, 'bg-[--secondMainColor]': selectedCategoryItem == index }" @click="selectedCategoryItem = index">
                         <p :class="{'text-[--white]': selectedCategoryItem == index }">{{ categoryItem }}</p>
@@ -118,12 +118,8 @@ const categoryPicList = [media.category_1, media.category_2];
             </div>
 
             <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full px-[3rem] py-[1rem]   border-[1px] border-red-500">
-                <ItemsCart class="w-[20vw]" />
-                <ItemsCart class="w-[20vw]" />
-                <ItemsCart class="w-[20vw]" />
-                <ItemsCart class="w-[20vw]" />
+                <ItemsCart v-for="item, index in commonData.productData" v-if="selectedCategoryItem == 0" class="w-[20vw]" :name="item.name" :category="item.category" :description="item.description" :price="item.price" :image="item.image"/>
             </div>
-
         </div>
     </div>
 </template>

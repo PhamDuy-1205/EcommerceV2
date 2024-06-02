@@ -8,5 +8,7 @@
     --secondMainColor : #ffb524;
     --yellow : #ffb524;
     --white : #FFFFFF;
-    --gray : rgba(0,0,0,.55);
+    /* --gray : rgba(0,0,0,.55); */
+    --gray : #747d88;
+    --black : #45595b;
 }

@@ -13,9 +13,9 @@ const menuBoxDisplay = ref(false)
             xl:flex">
                 <div class="flex justify-start items-center">
                     <img :src="commonMedia.yellow_position_marker" alt="yellow_position_marker" class="w-[20px]">
-                    <p class="mr-[20px] ishovering">{{ commonData.address }}</p>
+                    <p class="mr-[20px] ishovering">{{ commonData.mainData.address }}</p>
                     <img :src="commonMedia.yellow_email" alt="yellow_position_marker" class="w-[20px] mr-[5px]">
-                    <p class="ishovering">{{ commonData.email }}</p>
+                    <p class="ishovering">{{ commonData.mainData.email }}</p>
                 </div>
                 <div class="flex justify-center items-center">
                     <h1 class="ishovering">Privacy Policy</h1>
@@ -26,7 +26,7 @@ const menuBoxDisplay = ref(false)
                 </div>
             </div>
             <div class="w-full flex justify-between items-center my-[0.5rem]">
-                <h1 class="text-[2.5rem] font-[700] text-[--firstMainColor]">{{ commonData.webName }}</h1>
+                <h1 class="text-[2.5rem] font-[700] text-[--firstMainColor]">{{ commonData.mainData.webName }}</h1>
 
                 <div class="hidden xl:flex justify-between items-center">
                     <p class="text-[16px] text-[--gray] font-[400] py-[10px] px-[15px] ishovering">Home</p>
