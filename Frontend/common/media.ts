@@ -17,6 +17,20 @@ const white_security_payment_icon = '/_nuxt/assets/media/icons/white_security_pa
 // ---- Icons End ----
 
 
+// ---- Fruits Image Start ----
+const apple = '/_nuxt/assets/media/images/apple.jpg';
+const banana = '/_nuxt/assets/media/images/banana.jpg';
+const bell_pepper = '/_nuxt/assets/media/images/bell_pepper.jpg';
+const broccoli = '/_nuxt/assets/media/images/broccoli.jpg';
+const orange = '/_nuxt/assets/media/images/orange.jpg';
+const potato = '/_nuxt/assets/media/images/potato.jpg';
+const raspberry = '/_nuxt/assets/media/images/raspberry.jpg';
+const strawberry = '/_nuxt/assets/media/images/strawberry.jpg';
+const tomato = '/_nuxt/assets/media/images/tomato.jpg';
+
+// ---- Fruits Image End ----
+
+
 // ---- Image Start ----
 const default_avatar = '/_nuxt/assets/media/images/default_avatar.png';
 const payment = '/_nuxt/assets/media/images/payment.png';
@@ -47,4 +61,13 @@ export default {
     white_refund_icon,
     white_security_payment_icon,
     homePageBackGround,
+    apple,
+    banana,
+    bell_pepper,
+    broccoli,
+    orange,
+    potato,
+    raspberry,
+    strawberry,
+    tomato,
 }

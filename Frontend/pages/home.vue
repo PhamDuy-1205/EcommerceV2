@@ -6,9 +6,13 @@ const tempImg = ref(1);
 
 const listImage = ref();
 
-const categoryList = ["All Products", "Vegetables", "Fruits", "Bread", "Meat"]
+const categoryList = commonData.categoryList;
 
 const selectedCategoryItem = ref(0)
+
+function handleSelectCategoryItem(categoryItemIndex){
+    selectedCategoryItem.value = categoryItemIndex
+}
 
 // =========== Dữ liệu tạm thời ================
 
@@ -24,10 +28,10 @@ const categoryPicList = [media.category_1, media.category_2];
 
 <template>
     <div id="homepage">
-        <div class="flex justify-center items-center flex-col w-full py-[5rem] px-[3rem]   border-[1px] border-red-500">
+        <div class="flex justify-center items-center flex-col w-full py-[5rem] lg:px-[3rem]   border-[1px] border-red-500">
             <div class="block xl:flex justify-center items-center w-[80%] px-[1rem]">
 
-                <div class="flex justify-center items-start flex-col w-full lg:w-[60%]">
+                <div class="flex justify-center items-start flex-col w-full xl:w-[60%] mb-[2rem] xl:mb-0">
                     <p class="mb-[1rem] text-[1.5rem] text-[--secondMainColor] font-[600]">100% Organic Foods</p>
                     <p class="mb-[3rem] text-[4rem] text-[--firstMainColor] font-[800] max-w-[48rem]">Organic Veggies & Fruits Foods</p>
                     <div class="w-full">
@@ -37,9 +41,9 @@ const categoryPicList = [media.category_1, media.category_2];
                         </div>
                     </div>
                 </div>
-                <div class="ml-[1rem] flex items-center w-full lg:w-[40%] p-2rem relative">
-                    <div class="flex justify-start items-center w-full h-[20rem] overflow-hidden">
-                        <img v-for="categoryPic, index in categoryPicList" :src="categoryPic" alt="" class="listImage w-full h-full rounded-[40px]">
+                <div class="xl:ml-[1rem] flex items-center w-full xl:w-[40%] p-2rem relative border-[1px] border-[--secondMainColor] rounded-[30px] overflow-hidden">
+                    <div class="flex justify-start items-center w-full xl:h-[20rem] overflow-hidden">
+                        <img v-for="categoryPic, index in categoryPicList" :src="categoryPic" alt="" class="w-full">
                     </div>
                     <div class="flex justify-center items-center absolute h-[30px] w-[30px] bg-[--firstMainColor] rounded-[50%]">
                         <p class="font-[800]"><</p>
@@ -50,7 +54,7 @@ const categoryPicList = [media.category_1, media.category_2];
                 </div>
             </div>
 
-            <div class="flex justify-between items-center w-full p-[3rem] my-[7rem]">
+            <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 justify-between items-center w-full p-[3rem] my-[7rem]">
                 <!-- Free Shipping -->
                 <div class="flex justify-center items-center flex-col p-[1.5rem] bg-[#f4f6f8]">
                     <div class="relative flex justify-center w-[120px] h-[120px] mx-[69px] rounded-[50%] bg-[--yellow]">
@@ -108,17 +112,17 @@ const categoryPicList = [media.category_1, media.category_2];
                 </div>
             </div>
 
-            <div class="flex justify-between items-center w-full px-[3rem] my-[2rem]">
-                <p class="text-[2.5rem] font-[600] text-[--black]">Our Organic Products</p>
-                <div class="w-[40rem] flex justify-center items-center">
-                    <div v-for="categoryItem, index in categoryList" class="flex justify-center items-center text-[1rem] rounded-[30px] py-[10px] px-[20px] mx-[10px] min-w-[6rem] hover:cursor-pointer hover:translate-y-[-2px]" :class="{ 'bg-[#f4f6f8]': selectedCategoryItem != index, 'bg-[--secondMainColor]': selectedCategoryItem == index }" @click="selectedCategoryItem = index">
-                        <p :class="{'text-[--white]': selectedCategoryItem == index }">{{ categoryItem }}</p>
+            <div class="block lg:flex justify-between items-center w-full px-[3rem] my-[2rem]">
+                <p class="text-[calc(1.375rem+1.5vw)] font-[600] text-[--black] mb-[1rem] lg:mb-0">Our Organic Products</p>
+                <div class="w-[100%] py-[5px] lg:w-[40vw] flex justify-start items-center overflow-x-auto">
+                    <div v-for="categoryItem, index in categoryList" class="flex justify-center items-center text-[1rem] rounded-[30px] py-[10px] px-[20px] mx-[10px] w-fit min-w-[6rem] hover:cursor-pointer hover:translate-y-[-2px]" :class="{ 'bg-[#f4f6f8]': selectedCategoryItem != index, 'bg-[--secondMainColor]': selectedCategoryItem == index }" @click="handleSelectCategoryItem(index)">
+                        <p :class="{'whitespace-nowrap text-[--white]': selectedCategoryItem == index }">{{ categoryItem }}</p>
                     </div>
                 </div>
             </div>
 
             <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full px-[3rem] py-[1rem]   border-[1px] border-red-500">
-                <ItemsCart v-for="item, index in commonData.productData" v-if="selectedCategoryItem == 0" class="w-[20vw]" :name="item.name" :category="item.category" :description="item.description" :price="item.price" :image="item.image"/>
+                <ItemsCart v-for="item, index in commonData.productData.slice(0, 8)" class="w-[20vw]" :name="item.name" :category="item.category" :description="item.description" :price="item.price" :image="item.image"/>
             </div>
         </div>
     </div>
