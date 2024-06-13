@@ -38,6 +38,7 @@ const userAvatar = '/_nuxt/assets/media/images/userAvatar.png';
 const category_1 = '/_nuxt/assets/media/images/category_1.png';
 const category_2 = '/_nuxt/assets/media/images/category_2.jpg';
 const homePageBackGround = '/_nuxt/assets/media/images/homePageBackGround.jpg';
+const apple_basket_commercial = '/_nuxt/assets/media/images/apple_basket_commercial.png';
 // ---- Image End ----
 
 export default {
@@ -70,4 +71,5 @@ export default {
     raspberry,
     strawberry,
     tomato,
+    apple_basket_commercial,
 }

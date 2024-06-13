@@ -84,8 +84,20 @@ const productData = [
     },
 ]
 
+const commercialData = {
+    title : "Fresh Exotic Fruits in Our Store",
+    content : "The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.",
+    image : media.apple_basket_commercial
+}
+
+
+
+
+//=================================================================================================
+
 export default {
     mainData,
     categoryList,
     productData,
+    commercialData,
 };

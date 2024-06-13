@@ -113,7 +113,7 @@ const categoryPicList = [media.category_1, media.category_2];
             </div>
 
             <div class="block lg:flex justify-between items-center w-full px-[3rem] my-[2rem]">
-                <p class="text-[calc(1.375rem+1.5vw)] font-[600] text-[--black] mb-[1rem] lg:mb-0">Our Organic Products</p>
+                <p class="text-[calc(1.375rem+1.5vw)] font-[600] text-[--black] mb-[1rem] lg:mb-0">Bestseller Products</p>
                 <div class="w-[100%] py-[5px] lg:w-[40vw] flex justify-start items-center overflow-x-auto">
                     <div v-for="categoryItem, index in categoryList" class="flex justify-center items-center text-[1rem] rounded-[30px] py-[10px] px-[20px] mx-[10px] w-fit min-w-[6rem] hover:cursor-pointer hover:translate-y-[-2px]" :class="{ 'bg-[#f4f6f8]': selectedCategoryItem != index, 'bg-[--secondMainColor]': selectedCategoryItem == index }" @click="handleSelectCategoryItem(index)">
                         <p :class="{'whitespace-nowrap text-[--white]': selectedCategoryItem == index }">{{ categoryItem }}</p>
@@ -121,8 +121,12 @@ const categoryPicList = [media.category_1, media.category_2];
                 </div>
             </div>
 
-            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full px-[3rem] py-[1rem]   border-[1px] border-red-500">
+            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full px-[3rem] py-[1rem]">
                 <ItemsCart v-for="item, index in commonData.productData.slice(0, 8)" class="w-[20vw]" :name="item.name" :category="item.category" :description="item.description" :price="item.price" :image="item.image"/>
+            </div>
+
+            <div class="w-full h-fit">
+                <CommercialZone :title="commonData.commercialData.title" :content="commonData.commercialData.content" :image="commonData.commercialData.image"/>
             </div>
         </div>
     </div>
