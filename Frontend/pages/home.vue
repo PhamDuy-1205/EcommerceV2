@@ -112,6 +112,7 @@ const categoryPicList = [media.category_1, media.category_2];
                 </div>
             </div>
 
+            <!-- Bestseller Products -->
             <div class="block lg:flex justify-between items-center w-full px-[3rem] my-[2rem]">
                 <p class="text-[calc(1.375rem+1.5vw)] font-[600] text-[--black] mb-[1rem] lg:mb-0">Bestseller Products</p>
                 <div class="w-[100%] py-[5px] lg:w-[40vw] flex justify-start items-center overflow-x-auto">
@@ -120,14 +121,24 @@ const categoryPicList = [media.category_1, media.category_2];
                     </div>
                 </div>
             </div>
-
             <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full px-[3rem] py-[1rem]">
                 <ItemsCart v-for="item, index in commonData.productData.slice(0, 8)" class="w-[20vw]" :name="item.name" :category="item.category" :description="item.description" :price="item.price" :image="item.image"/>
             </div>
 
-            <div class="w-full h-fit">
+            <!-- Commercial -->
+            <div class="w-full h-fit mt-[4rem] mb-[2rem]">
                 <CommercialZone :title="commonData.commercialData.title" :content="commonData.commercialData.content" :image="commonData.commercialData.image"/>
             </div>
+
+            <!-- Recent Products -->
+            <div class="block lg:flex justify-between items-center w-full px-[3rem] my-[2rem]">
+                <p class="text-[calc(1.375rem+1.5vw)] font-[600] text-[--black] mb-[1rem] lg:mb-0">Recent Products</p>
+            </div>
+            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full px-[3rem] py-[1rem]">
+                <ItemsCart v-for="item, index in commonData.productData.slice(0, 8)" class="w-[20vw]" :name="item.name" :category="item.category" :description="item.description" :price="item.price" :image="item.image"/>
+            </div>
+
+
         </div>
     </div>
 </template>
